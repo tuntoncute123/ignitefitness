@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignite Fitness – New Way To Fit | Phòng Tập Gym Cho Mọi Người</title>
+  <meta name="description" content="Ignite Fitness – Chuỗi phòng tập gym hàng đầu Việt Nam với hơn 15 chi nhánh, trang thiết bị hiện đại, chi phí hợp lý. Tham gia ngay và nhận 7 ngày tập miễn phí!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" id="logo-link">
+        <div class="logo-icon">
+          <div class="logo-circle-blue"></div>
+          <div class="logo-circle-orange"></div>
+          <span class="logo-text-the">THE</span>
+          <span class="logo-text-main">IGNITE</span>
+          <span class="logo-text-main logo-alt">gym</span>
+        </div>
+        <span class="logo-sub">new way to fit</span>
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <a href="#pricing" class="nav-link" id="nav-pricing">Giá Hội viên</a>
+        <a href="#branches" class="nav-link" id="nav-branches">Tìm phòng tập</a>
+        <a href="#features" class="nav-link" id="nav-facilities">Cơ sở vật chất</a>
+        <a href="#knowledge" class="nav-link" id="nav-knowledge">Kiến thức tập luyện</a>
+        <a href="#app" class="nav-link" id="nav-app">Ứng dụng Ignite Fitness</a>
+        <a href="#about" class="nav-link nav-dropdown" id="nav-more">Tìm hiểu thêm <span class="arrow">▾</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" id="lang-switcher">
+          <span class="flag">🇻🇳</span> VI <span class="arrow">▾</span>
+        </div>
+        <a href="#pricing" class="btn btn-blue" id="btn-join">Tham gia</a>
+        <a href="#free-trial" class="btn btn-orange" id="btn-free">Miễn phí 7 ngày</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MARQUEE BAR -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp; GYM CHO MỌI NGƯỜI &nbsp;★&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- HERO SLIDER -->
+  <section class="hero" id="hero">
+    <div class="slider" id="hero-slider">
+      <!-- Slide 1 -->
+      <div class="slide active" id="slide-1">
+        <img src="images/hero_banner_1.png" alt="Ignite Fitness 2026 - Phòng tập gym" class="slide-bg" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">IGNITE FITNESS 2026</h1>
+          <p class="slide-sub">Nâng tầm trải nghiệm tập luyện của bạn với hệ thống phòng gym hiện đại nhất Việt Nam</p>
+          <a href="#features" class="btn btn-white-outline" id="slide1-cta">Xem chi tiết →</a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide" id="slide-2">
+        <img src="images/hero_banner_2.png" alt="Hướng dẫn tập luyện miễn phí" class="slide-bg" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">HƯỚNG DẪN<br>TẬP LUYỆN MIỄN PHÍ</h1>
+          <p class="slide-sub">Đội ngũ PT chuyên nghiệp sẵn sàng đồng hành cùng bạn trên hành trình thay đổi bản thân</p>
+          <a href="#free-trial" class="btn btn-white-outline" id="slide2-cta">Tìm hiểu ngay →</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide" id="slide-3">
+        <img src="images/hero_banner_3.png" alt="Thêm bạn thêm vui" class="slide-bg" />
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">THÊM BẠN<br>THÊM VUI</h1>
+          <p class="slide-sub">Giới thiệu bạn bè, cùng nhau rèn luyện và nhận ưu đãi hấp dẫn mỗi tháng</p>
+          <a href="#pricing" class="btn btn-white-outline" id="slide3-cta">Tham gia ngay →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="slider-controls">
+      <button class="slider-prev" id="slider-prev" aria-label="Previous slide">&#8249;</button>
+      <div class="slider-dots" id="slider-dots">
+        <button class="dot active" id="dot-1" data-slide="0"></button>
+        <button class="dot" id="dot-2" data-slide="1"></button>
+        <button class="dot" id="dot-3" data-slide="2"></button>
+      </div>
+      <button class="slider-next" id="slider-next" aria-label="Next slide">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- BRANCH FINDER -->
+  <section class="branch-finder" id="branches">
+    <div class="container">
+      <h2 class="section-title">Tìm Phòng Tập Gần Bạn</h2>
+      <div class="branch-finder-form">
+        <select class="branch-select" id="city-select">
+          <option value="">Chọn thành phố</option>
+          <option value="hcm">Hồ Chí Minh</option>
+          <option value="hn">Hà Nội</option>
+          <option value="dn">Đà Nẵng</option>
+          <option value="ct">Cần Thơ</option>
+          <option value="bd">Bình Dương</option>
+        </select>
+        <select class="branch-select" id="district-select">
+          <option value="">Chọn quận / huyện</option>
+        </select>
+        <button class="btn btn-blue btn-find" id="btn-find-branch">Tìm phòng tập →</button>
+      </div>
+      <div class="branch-tags">
+        <span class="branch-tag">Quận 1</span>
+        <span class="branch-tag">Quận 3</span>
+        <span class="branch-tag">Quận 7</span>
+        <span class="branch-tag">Bình Thạnh</span>
+        <span class="branch-tag">Tân Bình</span>
+        <span class="branch-tag">Gò Vấp</span>
+        <span class="branch-tag active-tag">Hoàng Mai</span>
+        <span class="branch-tag">Cầu Giấy</span>
+        <span class="branch-tag">Hải Châu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Gói Hội Viên</h2>
+      <p class="section-sub">Lựa chọn gói tập phù hợp với nhu cầu và ngân sách của bạn</p>
+      <div class="pricing-grid">
+        <!-- Featured plan -->
+        <div class="pricing-card pricing-card--featured" id="plan-all">
+          <div class="pricing-card-inner">
+            <h3 class="plan-name">Gói tập một tháng<br><strong>Tất cả chi nhánh</strong></h3>
+            <div class="plan-price">
+              <span class="price-amount">399.000</span>
+              <span class="price-currency">VNĐ</span>
+              <span class="price-period">/Tháng</span>
+            </div>
+            <a href="#" class="btn btn-white-outline-blue plan-btn" id="plan-all-btn">Tham gia gói →</a>
+            <p class="plan-desc">Hội viên có thể tập luyện tại bất kỳ chi nhánh nào của Ignite Fitness trên toàn quốc, tận hưởng tất cả đặc quyền và nhiều hơn thế nữa.</p>
+            <a href="#" class="plan-detail-link" id="plan-all-detail">Xem chi tiết →</a>
+          </div>
+          <div class="pricing-card-deco"></div>
+        </div>
+        <!-- Standard plan -->
+        <div class="pricing-card" id="plan-single">
+          <h3 class="plan-name">Gói tập một tháng<br><strong>1 chi nhánh</strong></h3>
+          <div class="plan-price">
+            <span class="price-amount">299.000</span>
+            <span class="price-currency">VNĐ</span>
+            <span class="price-period">/Tháng</span>
+          </div>
+          <a href="#" class="btn btn-outline-blue plan-btn" id="plan-single-btn">Tham gia gói →</a>
+          <p class="plan-desc">Lựa chọn tiết kiệm nhất, dành cho Hội viên có nhu cầu tập luyện cố định tại một địa điểm thuận tiện gần nhà hoặc nơi làm việc.</p>
+          <a href="#" class="plan-detail-link" id="plan-single-detail">Xem chi tiết →</a>
+        </div>
+      </div>
+      <div class="pricing-actions">
+        <a href="#" class="btn btn-outline-blue btn-compare" id="btn-compare">So sánh gói tập</a>
+        <a href="#free-trial" class="btn btn-outline-blue btn-compare" id="btn-free-trial-pricing">Nhận 7 ngày tập miễn phí</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE TRIAL SECTION -->
+  <section class="free-trial-section" id="free-trial">
+    <div class="container free-trial-container">
+      <div class="free-trial-img">
+        <img src="images/gym_trainer.png" alt="Personal trainer Ignite Fitness" />
+      </div>
+      <div class="free-trial-content">
+        <h2 class="free-trial-title">7 NGÀY TẬP LUYỆN<br>MIỄN PHÍ</h2>
+        <p class="free-trial-desc">Ignite Fitness tặng bạn một tuần trải nghiệm miễn phí, với tinh thần "Gym cho mọi người" giúp Hội viên có thể bắt đầu tập luyện một cách tự tin.</p>
+        <a href="#" class="btn btn-outline-blue" id="btn-free-trial-detail">Xem chi tiết →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GYM INTERIOR FULL WIDTH -->
+  <section class="gym-full-width" id="gym-interior">
+    <img src="images/gym_interior.png" alt="Phòng tập Ignite Fitness - Cơ sở vật chất hiện đại" class="gym-full-img" />
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="features-title">NƠI BẠN CẢM THẤY THUỘC VỀ</h2>
+      <div class="features-grid">
+        <div class="feature-card" id="feature-price">
+          <div class="feature-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <rect width="60" height="60" rx="12" fill="#E3F7FF"/>
+              <path d="M30 12C20.06 12 12 20.06 12 30C12 39.94 20.06 48 30 48C39.94 48 48 39.94 48 30C48 20.06 39.94 12 30 12ZM30 44C22.27 44 16 37.73 16 30C16 22.27 22.27 16 30 16C37.73 16 44 22.27 44 30C44 37.73 37.73 44 30 44Z" fill="#00AEEF"/>
+              <path d="M30 20V24M30 36V40M22 30H18M42 30H38" stroke="#00AEEF" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="30" cy="30" r="5" fill="#F26524"/>
+            </svg>
+          </div>
+          <h3 class="feature-name">Chi phí tối ưu<br>Giá trị vượt trội</h3>
+          <p class="feature-desc">Ignite Fitness tự tin mang lại trải nghiệm tập luyện chất lượng cao với mức chi phí hợp lý nhất cho người Việt.</p>
+        </div>
+        <div class="feature-card" id="feature-equipment">
+          <div class="feature-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <rect width="60" height="60" rx="12" fill="#E3F7FF"/>
+              <rect x="12" y="27" width="36" height="6" rx="3" fill="#00AEEF"/>
+              <rect x="8" y="23" width="8" height="14" rx="3" fill="#00AEEF"/>
+              <rect x="44" y="23" width="8" height="14" rx="3" fill="#00AEEF"/>
+              <rect x="4" y="25" width="6" height="10" rx="2" fill="#F26524"/>
+              <rect x="50" y="25" width="6" height="10" rx="2" fill="#F26524"/>
+            </svg>
+          </div>
+          <h3 class="feature-name">Trang thiết bị<br>đa dạng và hiện đại</h3>
+          <p class="feature-desc">Cung cấp đầy đủ các loại máy tập cardio và tạ hiện đại, trong một không gian sạch sẽ và thoải mái để bạn bứt phá mọi giới hạn.</p>
+        </div>
+        <div class="feature-card" id="feature-branches">
+          <div class="feature-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <rect width="60" height="60" rx="12" fill="#E3F7FF"/>
+              <path d="M30 10C22.27 10 16 16.27 16 24C16 33 30 50 30 50C30 50 44 33 44 24C44 16.27 37.73 10 30 10Z" fill="#00AEEF"/>
+              <circle cx="30" cy="24" r="6" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="feature-name">Hơn 15 chi nhánh trên<br>toàn quốc</h3>
+          <p class="feature-desc">Với hơn 15 chi nhánh trải dài khắp các thành phố lớn, Ignite Fitness luôn sẵn sàng đồng hành cùng bạn trên mọi hành trình tập luyện.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP SECTION -->
+  <section class="app-section" id="app">
+    <div class="container app-container">
+      <div class="app-content">
+        <h2 class="app-title">ỨNG DỤNG<br>IGNITE FITNESS</h2>
+        <p class="app-desc">Với ứng dụng Ignite Fitness, việc tập luyện trở nên đơn giản hơn. Từ đăng ký gói tập, xem lịch các lớp tập nhóm đến theo dõi chỉ số sức khoẻ.</p>
+        <a href="#" class="btn btn-blue" id="btn-download-app">Tải ứng dụng →</a>
+        <div class="app-store-links">
+          <a href="#" class="store-btn" id="btn-appstore">
+            <svg viewBox="0 0 24 24" fill="white" width="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="#" class="store-btn" id="btn-googleplay">
+            <svg viewBox="0 0 24 24" fill="white" width="20"><path d="M3.18 23.76c.35.19.74.24 1.13.14L14.89 12 11 8.11 3.18 23.76zM20.87 10.42l-2.83-1.59-3.56 3.17 3.56 3.17 2.87-1.61c.82-.46.82-1.68-.04-2.14zM2.29.36C2.1.57 2 .88 2 1.27v21.46c0 .39.1.7.29.91L2.42 23.7l12.01-12.01v-.38L2.42.22 2.29.36zM14.89 12L4.31 1.1c-.39-.1-.78-.05-1.13.14L14.89 12z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+      <div class="app-mockup">
+        <img src="images/mobile_app.png" alt="Ứng dụng Ignite Fitness" />
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE SECTION -->
+  <section class="knowledge-section" id="knowledge">
+    <div class="container">
+      <h2 class="section-title">Kiến Thức Tập Luyện</h2>
+      <p class="section-sub">Cập nhật những kiến thức tập luyện và dinh dưỡng mới nhất từ đội ngũ chuyên gia</p>
+      <div class="knowledge-grid">
+        <div class="knowledge-card" id="kb-1">
+          <div class="knowledge-img" style="background: linear-gradient(135deg, #00AEEF, #0088cc)">
+            <div class="knowledge-tag">Tập luyện</div>
+          </div>
+          <div class="knowledge-body">
+            <h3>5 bài tập cardio hiệu quả nhất cho người mới bắt đầu</h3>
+            <p>Khám phá những bài tập cardio phù hợp nhất để bắt đầu hành trình fitness của bạn...</p>
+            <a href="#" class="knowledge-link" id="kb-link-1">Đọc thêm →</a>
+          </div>
+        </div>
+        <div class="knowledge-card" id="kb-2">
+          <div class="knowledge-img" style="background: linear-gradient(135deg, #F26524, #d44e0e)">
+            <div class="knowledge-tag">Dinh dưỡng</div>
+          </div>
+          <div class="knowledge-body">
+            <h3>Chế độ ăn uống tối ưu để tăng cơ và giảm mỡ</h3>
+            <p>Tìm hiểu về cách kết hợp protein, carb và chất béo để đạt được body hoàn hảo...</p>
+            <a href="#" class="knowledge-link" id="kb-link-2">Đọc thêm →</a>
+          </div>
+        </div>
+        <div class="knowledge-card" id="kb-3">
+          <div class="knowledge-img" style="background: linear-gradient(135deg, #2c3e50, #4a6fa5)">
+            <div class="knowledge-tag">Phục hồi</div>
+          </div>
+          <div class="knowledge-body">
+            <h3>Tại sao nghỉ ngơi cũng quan trọng không kém việc tập luyện</h3>
+            <p>Hiểu rõ tầm quan trọng của giấc ngủ và ngày nghỉ trong quá trình xây dựng cơ bắp...</p>
+            <a href="#" class="knowledge-link" id="kb-link-3">Đọc thêm →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION / START TODAY -->
+  <section class="cta-section" id="start-today">
+    <div class="container">
+      <h2 class="cta-title">BẮT ĐẦU NGAY HÔM NAY</h2>
+      <div class="cta-grid">
+        <a href="#branches" class="cta-card" id="cta-find">
+          <div class="cta-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="14" stroke="#00AEEF" stroke-width="3" fill="none"/>
+              <path d="M33 33L42 42" stroke="#00AEEF" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span>Tìm phòng tập gần bạn</span>
+        </a>
+        <a href="#pricing" class="cta-card" id="cta-membership">
+          <div class="cta-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 28C8 20.27 14.27 14 22 14H26C33.73 14 40 20.27 40 28" stroke="#00AEEF" stroke-width="3" fill="none"/>
+              <circle cx="16" cy="32" r="4" fill="#00AEEF"/>
+              <circle cx="32" cy="32" r="4" fill="#00AEEF"/>
+              <circle cx="24" cy="20" r="5" fill="#00AEEF"/>
+            </svg>
+          </div>
+          <span>Khám phá gói hội viên</span>
+        </a>
+        <a href="#features" class="cta-card" id="cta-space">
+          <div class="cta-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="18" width="28" height="20" rx="3" stroke="#00AEEF" stroke-width="3" fill="none"/>
+              <path d="M18 18V14C18 11.8 19.8 10 22 10H26C28.2 10 30 11.8 30 14V18" stroke="#00AEEF" stroke-width="3" fill="none"/>
+              <path d="M18 28H30M24 24V34" stroke="#00AEEF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span>Không gian tập luyện</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+            <span class="logo-text-the" style="color:white">THE</span>
+            <span class="logo-text-main" style="color:white">IGNITE</span>
+            <span class="logo-text-main logo-alt" style="color: #00AEEF">gym</span>
+          </div>
+          <span class="logo-sub" style="color:rgba(255,255,255,0.7)">new way to fit</span>
+        </div>
+        <a href="#app" class="btn btn-white-solid" id="btn-download-footer">TẢI APP NGAY</a>
+      </div>
+    </div>
+
+    <div class="footer-body">
+      <div class="container footer-body-inner">
+        <div class="footer-col">
+          <h4 class="footer-heading">Thông Tin</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-about">Về Chúng Tôi</a></li>
+            <li><a href="#branches" id="footer-branches">Hệ Thống Phòng Tập</a></li>
+            <li><a href="#" id="footer-news">Tin Tức</a></li>
+            <li><a href="#" id="footer-careers">Tuyển Dụng</a></li>
+            <li><a href="#" id="footer-contact">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Phòng Tập</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-schedule">Lịch Tập</a></li>
+            <li><a href="#pricing" id="footer-pricing">Giá Hội Viên</a></li>
+            <li><a href="#features" id="footer-facilities">Cơ Sở Vật Chất</a></li>
+            <li><a href="#app" id="footer-app">Ứng Dụng Ignite Fitness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Chính sách</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="footer-privacy">Chính Sách Bảo Mật</a></li>
+            <li><a href="#" id="footer-terms">Điều Khoản & Điều Kiện</a></li>
+            <li><a href="#" id="footer-support">Chăm Sóc Khách Hàng</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-lang-col">
+          <div class="footer-lang">
+            <span class="flag">🇻🇳</span> Tiếng Việt <span class="arrow">▾</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="copyright">© 2025 Ignite Fitness.</span>
+        <div class="social-links">
+          <span>Theo dõi chúng tôi:</span>
+          <a href="#" class="social-icon" id="social-fb" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
+          <a href="#" class="social-icon" id="social-ig" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="social-icon" id="social-tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="#" class="social-icon" id="social-yt" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-btns" id="floating-btns">
+    <a href="tel:1900xxxx" class="float-btn float-phone" id="float-phone" aria-label="Gọi điện">
+      <svg viewBox="0 0 24 24" fill="white" width="22"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    </a>
+    <a href="https://zalo.me/" target="_blank" class="float-btn float-zalo" id="float-zalo" aria-label="Zalo">
+      <svg viewBox="0 0 32 32" fill="white" width="22"><text x="2" y="24" font-size="16" font-weight="bold" fill="white">Z</text></svg>
+    </a>
+    <a href="https://m.me/" target="_blank" class="float-btn float-messenger" id="float-messenger" aria-label="Messenger">
+      <svg viewBox="0 0 24 24" fill="white" width="22"><path d="M12 0C5.374 0 0 4.975 0 11.111c0 3.498 1.744 6.614 4.469 8.652V24l4.088-2.242c1.092.3 2.246.464 3.443.464 6.626 0 12-4.975 12-11.111C24 4.975 18.626 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26L10.732 8l3.131 3.259L19.752 8l-6.561 6.963z"/></svg>
+    </a>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

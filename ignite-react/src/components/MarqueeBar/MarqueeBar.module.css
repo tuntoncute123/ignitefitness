@@ -1,0 +1,28 @@
+.bar {
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  overflow: hidden;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  /* push below fixed header */
+  margin-top: 60px;
+}
+
+@media (min-width: 992px) {
+  .bar { margin-top: 68px; }
+}
+
+.track {
+  display: inline-flex;
+  animation: marquee 25s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

@@ -1,0 +1,60 @@
+.section { background: var(--light-gray); padding: 36px 0 40px; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.select {
+  padding: 11px 18px;
+  border: 2px solid var(--mid-gray);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  background: white;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+@media (min-width: 576px) { .select { width: 200px; } }
+
+.select:focus { border-color: var(--blue); }
+
+/* btn from global .btn .btn-blue via className */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: white;
+  border: 1.5px solid var(--mid-gray);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tag:hover            { border-color: var(--blue); color: var(--blue); }
+.tag.tagActive        { background: var(--blue); border-color: var(--blue); color: white; }

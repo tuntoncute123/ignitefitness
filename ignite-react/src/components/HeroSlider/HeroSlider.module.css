@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  width: 100%;
+  /* mobile: 100vh minus header(60) minus marquee(34) */
+  height: calc(100vh - 94px);
+  min-height: 420px;
+  overflow: hidden;
+  background: #111;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    height: calc(100vh - 102px); /* 68px header + 34px marquee */
+    min-height: 520px;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.85s ease;
+}
+
+.slide.active { opacity: 1; }
+
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.72) 0%,
+    rgba(0,0,0,0.42) 55%,
+    rgba(0,0,0,0.1)  100%
+  );
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 20px;
+}
+
+@media (min-width: 576px) {
+  .content { padding: 40px 40px; }
+}
+
+@media (min-width: 992px) {
+  .content { padding: 60px 80px; max-width: 680px; }
+}
+
+.title {
+  font-size: clamp(1.6rem, 6vw, 3.8rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  margin-bottom: 12px;
+}
+
+.sub {
+  font-size: clamp(0.82rem, 2.5vw, 1rem);
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 22px;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.cta {
+  align-self: flex-start;
+}
+
+/* Controls */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+@media (min-width: 576px) {
+  .controls { bottom: 28px; right: 32px; gap: 16px; }
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+  backdrop-filter: blur(8px);
+  line-height: 1;
+}
+
+.arrow:hover { background: rgba(255,255,255,0.3); border-color: white; }
+
+.dots { display: flex; gap: 7px; }
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+
+.dot.dotActive {
+  background: white;
+  width: 22px;
+  border-radius: 4px;
+}

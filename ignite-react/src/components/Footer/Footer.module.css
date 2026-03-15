@@ -1,0 +1,99 @@
+.footer { background: var(--footer-bg); color: white; }
+
+/* TOP */
+.top { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
+
+.topInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* LOGO */
+.logoWrap { display: flex; align-items: center; gap: 9px; }
+
+.logoBlock {
+  background: rgba(255,255,255,0.2);
+  border-radius: 9px;
+  padding: 4px 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTop    { font-size: 0.42rem; font-weight: 700; color: rgba(255,255,255,0.8); letter-spacing: 0.1em; }
+.logoBottom { font-size: 0.9rem;  font-weight: 900; color: white; line-height: 1; }
+
+.logoRight { display: flex; flex-direction: column; }
+.logoBrand { font-size: 1.1rem; font-weight: 900; color: white; font-style: italic; }
+.logoTagline { font-size: 0.5rem; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; }
+
+/* BODY – Bootstrap row in JSX handles columns */
+.body { padding: 36px 0 24px; }
+
+.colTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
+}
+
+.links li { margin-bottom: 9px; }
+
+.links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: block;
+}
+
+.links a:hover { color: white; padding-left: 4px; }
+
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 7px 14px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.lang:hover { background: rgba(255,255,255,0.15); }
+.arrow { font-size: 0.65rem; opacity: 0.6; }
+
+/* BOTTOM */
+.bottom { border-top: 1px solid rgba(255,255,255,0.2); padding: 18px 0; }
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 576px) {
+  .bottomInner { flex-direction: column; text-align: center; }
+  .topInner    { justify-content: center; }
+}
+
+.copy { font-size: 0.8rem; color: rgba(255,255,255,0.8); }
+
+.social { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: rgba(255,255,255,0.8); flex-wrap: wrap; }
+
+.socialIcon {
+  color: white;
+  opacity: 0.85;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcon:hover { opacity: 1; transform: translateY(-2px); }
