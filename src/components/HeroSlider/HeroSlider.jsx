@@ -1,10 +1,13 @@
 import { useState, useEffect, useCallback } from 'react'
 import styles from './HeroSlider.module.css'
+import heroBanner1 from '../../assets/hero_banner_1.png'
+import heroBanner2 from '../../assets/hero_banner_2.png'
+import heroBanner3 from '../../assets/hero_banner_3.png'
 
 const SLIDES = [
   {
     id: 'slide-1',
-    img: '/images/hero_banner_1.png',
+    img: heroBanner1,
     alt: 'Ignite Fitness 2026',
     title: 'IGNITE FITNESS 2026',
     sub: 'Nâng tầm trải nghiệm tập luyện của bạn với hệ thống phòng gym hiện đại nhất Việt Nam',
@@ -13,7 +16,7 @@ const SLIDES = [
   },
   {
     id: 'slide-2',
-    img: '/images/hero_banner_2.png',
+    img: heroBanner2,
     alt: 'Hướng dẫn tập luyện miễn phí',
     title: 'HƯỚNG DẪN\nTẬP LUYỆN MIỄN PHÍ',
     sub: 'Đội ngũ PT chuyên nghiệp sẵn sàng đồng hành cùng bạn trên hành trình thay đổi bản thân',
@@ -22,7 +25,7 @@ const SLIDES = [
   },
   {
     id: 'slide-3',
-    img: '/images/hero_banner_3.png',
+    img: heroBanner3,
     alt: 'Thêm bạn thêm vui',
     title: 'THÊM BẠN\nTHÊM VUI',
     sub: 'Giới thiệu bạn bè, cùng nhau rèn luyện và nhận ưu đãi hấp dẫn mỗi tháng',

@@ -1,4 +1,5 @@
 import styles from './AppSection.module.css'
+import mobileAppImg from '../../assets/mobile_app.png'
 
 export default function AppSection() {
   return (
@@ -30,7 +31,7 @@ export default function AppSection() {
             </div>
           </div>
           <div className={styles.mockup}>
-            <img src="/images/mobile_app.png" alt="Ứng dụng Ignite Fitness" />
+            <img src={mobileAppImg} alt="Ứng dụng Ignite Fitness" />
           </div>
         </div>
       </div>

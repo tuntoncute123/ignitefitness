@@ -1,11 +1,12 @@
 import styles from './FreeTrial.module.css'
+import gymTrainerImg from '../../assets/gym_trainer.png'
 
 export default function FreeTrial() {
   return (
     <section className={styles.section} id="free-trial">
       <div className={`container ${styles.container}`}>
         <div className={styles.imgWrap}>
-          <img src="/images/gym_trainer.png" alt="Personal trainer Ignite Fitness" />
+          <img src={gymTrainerImg} alt="Personal trainer Ignite Fitness" />
         </div>
         <div className={styles.content}>
           <h2 className={styles.title}>
