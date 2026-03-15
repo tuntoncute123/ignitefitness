@@ -4,7 +4,7 @@ import styles from './Header.module.css'
 const NAV_ITEMS = [
   { label: 'Giá Hội viên',            href: '/#pricing'   },
   { label: 'Tìm phòng tập',           href: '/#branches'  },
-  { label: 'Cơ sở vật chất',          href: '/#features'  },
+  { label: 'Cơ sở vật chất',          href: '/co-so-vat-chat'  },
   { label: 'Kiến thức tập luyện',     href: '/tin-tuc'    },
   { label: 'Ứng dụng Ignite Fitness', href: '/#app'       },
   { label: 'Tìm hiểu thêm',           href: '/#about'     },

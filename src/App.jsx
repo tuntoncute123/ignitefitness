@@ -6,6 +6,7 @@ import FloatingButtons from './components/FloatingButtons/FloatingButtons'
 import BackToTop from './components/BackToTop/BackToTop'
 import Home from './pages/Home/Home'
 import News from './pages/News/News'
+import Facilities from './pages/Facilities/Facilities'
 
 function ScrollToHash() {
   const { hash } = useLocation()
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tin-tuc" element={<News />} />
+        <Route path="/co-so-vat-chat" element={<Facilities />} />
       </Routes>
       <Footer />
       <FloatingButtons />

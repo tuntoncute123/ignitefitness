@@ -1,0 +1,209 @@
+.facilitiesPage {
+  padding-top: 120px;
+  background: white;
+  min-height: 100vh;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 40px 0;
+  color: var(--blue);
+}
+
+/* Sticky Nav Menu */
+.stickyNav {
+  background: white;
+  position: sticky;
+  top: var(--header-height, 80px); /* header height offset */
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  margin-bottom: 40px;
+}
+
+.navRow {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.navRow::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.navBtn {
+  white-space: nowrap;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  color: #333;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.navBtn:hover, .navBtn.active {
+  background: var(--blue);
+  color: white;
+}
+
+/* Section Common */
+.sectionBlock {
+  scroll-margin-top: 150px; /* Offset for sticky nav and header */
+  padding: 40px 0;
+}
+
+/* Accordion Custom */
+.accordionItem {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordionHeader {
+  background: #f9f9f9;
+  padding: 15px 20px;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.accordionHeader:hover {
+  background: #f1f1f1;
+}
+
+.accordionHeader i {
+  margin-right: 15px;
+  color: var(--blue);
+  font-size: 20px;
+  width: 25px;
+  text-align: center;
+}
+
+.accordionContent {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.accordionContent ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.accordionContent li {
+  margin-bottom: 8px;
+}
+
+.chevron {
+  transition: transform 0.3s;
+  width: 20px;
+  height: 20px;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Horizontal List Cards */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .featureGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureCard {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.featureCardIcon {
+  margin-bottom: 20px;
+}
+
+.featureCardIcon svg {
+  width: 60px;
+  height: 60px;
+}
+
+.featureCard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.featureCard p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Utility List */
+.utilityList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.utilityItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.utilityIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.imgRounded {
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Image Scroller */
+.imageScroller {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  scrollbar-width: none;
+}
+.imageScroller::-webkit-scrollbar {
+  display: none;
+}
+.imageScroller img {
+  height: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
