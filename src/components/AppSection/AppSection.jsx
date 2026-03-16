@@ -1,3 +1,4 @@
+import Reveal from '../Reveal/Reveal'
 import styles from './AppSection.module.css'
 import mobileAppImg from '../../assets/mobile_app.png'
 
@@ -6,7 +7,7 @@ export default function AppSection() {
     <section className={styles.section} id="app">
       <div className="container">
         <div className={styles.card}>
-          <div className={styles.content}>
+          <Reveal direction="left" className={styles.content}>
             <h2 className={styles.title}>
               ỨNG DỤNG<br />IGNITE FITNESS
             </h2>
@@ -29,10 +30,10 @@ export default function AppSection() {
                 Google Play
               </a>
             </div>
-          </div>
-          <div className={styles.mockup}>
+          </Reveal>
+          <Reveal direction="up" delay={2} className={styles.mockup}>
             <img src={mobileAppImg} alt="Ứng dụng Ignite Fitness" />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

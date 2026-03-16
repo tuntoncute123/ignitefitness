@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import Reveal from '../Reveal/Reveal'
 import styles from './Features.module.css'
 
 const FEATURES = [
@@ -45,50 +45,28 @@ const FEATURES = [
 ]
 
 export default function Features() {
-  const cardsRef = useRef([])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, idx) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = '1'
-              entry.target.style.transform = 'translateY(0)'
-            }, idx * 120)
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.12 }
-    )
-    cardsRef.current.forEach((el) => el && observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section className={styles.section} id="features">
       <div className="container">
-        <h2 className={styles.heading}>NƠI BẠN CẢM THẤY THUỘC VỀ</h2>
+        <Reveal direction="up">
+          <h2 className={styles.heading}>NƠI BẠN CẢM THẤY THUỘC VỀ</h2>
+        </Reveal>
 
         {/* Bootstrap: 1 col xs, 2 col sm, 3 col lg */}
         <div className="row g-3 justify-content-center">
           {FEATURES.map((f, i) => (
             <div key={f.id} className="col-12 col-sm-6 col-lg-4">
-              <div
-                id={f.id}
-                className={styles.card}
-                ref={(el) => (cardsRef.current[i] = el)}
-                style={{ opacity: 0, transform: 'translateY(28px)', transition: 'opacity 0.55s ease, transform 0.55s ease' }}
-              >
-                <div className={styles.icon}>{f.icon}</div>
-                <h3 className={styles.name}>
-                  {f.title.split('\n').map((line, idx2) => (
-                    <span key={idx2}>{line}<br /></span>
-                  ))}
-                </h3>
-                <p className={styles.desc}>{f.desc}</p>
-              </div>
+              <Reveal direction="up" delay={i + 1}>
+                <div id={f.id} className={styles.card}>
+                  <div className={styles.icon}>{f.icon}</div>
+                  <h3 className={styles.name}>
+                    {f.title.split('\n').map((line, idx2) => (
+                      <span key={idx2}>{line}<br /></span>
+                    ))}
+                  </h3>
+                  <p className={styles.desc}>{f.desc}</p>
+                </div>
+              </Reveal>
             </div>
           ))}
         </div>

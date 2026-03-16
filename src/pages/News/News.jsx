@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './News.module.css'
+import Reveal from '../../components/Reveal/Reveal'
 
 // Mock Data
 const FEATURED_POSTS = [
@@ -92,10 +93,12 @@ export default function News() {
   return (
     <div className={styles.newsPage}>
       <div className="container pb-5">
-        <h1 className={styles.pageTitle}>TẬP LUYỆN HIỆU QUẢ CÙNG <span>THE NEW GYM</span></h1>
+        <Reveal direction="up">
+          <h1 className={styles.pageTitle}>TẬP LUYỆN HIỆU QUẢ CÙNG <span>THE NEW GYM</span></h1>
+        </Reveal>
 
         {/* Featured Section */}
-        <div className={styles.featuredSection}>
+        <Reveal direction="up" delay={1} className={styles.featuredSection}>
           <div className="row flex-nowrap overflow-auto pb-3 g-4" style={{scrollbarWidth: 'none'}}>
             {FEATURED_POSTS.map((post) => (
               <div key={post.id} className="col-12 col-md-10 col-lg-8" style={{minWidth: '300px'}}>
@@ -119,10 +122,10 @@ export default function News() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Filters */}
-        <div className={styles.filterSection}>
+        <Reveal direction="up" delay={2} className={styles.filterSection}>
           {FILTERS.map(filter => (
             <button 
               key={filter} 
@@ -132,44 +135,46 @@ export default function News() {
               {filter}
             </button>
           ))}
-        </div>
+        </Reveal>
 
         {/* Grid Section */}
         <div className="row g-4 mb-5">
-          {displayPosts.map(post => (
+          {displayPosts.map((post, i) => (
             <div key={post.id} className="col-12 col-sm-6 col-lg-4">
-              <a href={post.url} className={styles.gridCard}>
-                <div className={styles.gridImage}>
-                  <img src={post.image} alt={post.title} />
-                </div>
-                <div className={styles.gridContent}>
-                  <div className={styles.categoryTags}>
-                    {post.tags.map(tag => (
-                      <span key={tag} className={styles.categoryTag}>{tag}</span>
-                    ))}
+              <Reveal direction="up" delay={(i % 3) + 1} className="h-100">
+                <a href={post.url} className={styles.gridCard}>
+                  <div className={styles.gridImage}>
+                    <img src={post.image} alt={post.title} />
                   </div>
-                  <h3 className={styles.postTitle}>{post.title}</h3>
-                  <div className={styles.postExcerpt}>{post.excerpt}</div>
-                  <div>
-                    <span className={styles.readMoreBtn}>
-                      Xem thêm <span className={styles.arrowIcon}></span>
-                    </span>
+                  <div className={styles.gridContent}>
+                    <div className={styles.categoryTags}>
+                      {post.tags.map(tag => (
+                        <span key={tag} className={styles.categoryTag}>{tag}</span>
+                      ))}
+                    </div>
+                    <h3 className={styles.postTitle}>{post.title}</h3>
+                    <div className={styles.postExcerpt}>{post.excerpt}</div>
+                    <div>
+                      <span className={styles.readMoreBtn}>
+                        Xem thêm <span className={styles.arrowIcon}></span>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </Reveal>
             </div>
           ))}
         </div>
 
-        <div className={styles.loadMoreContainer}>
+        <Reveal direction="up" className={styles.loadMoreContainer}>
           <button className={styles.btnLoadMore}>Xem thêm ▾</button>
-        </div>
+        </Reveal>
 
         {/* Free Trial Form Section */}
         <div className={styles.formSection}>
           <div className="row justify-content-center">
             <div className="col-12 col-md-8 col-lg-6">
-              <div className={styles.formBox}>
+              <Reveal direction="up" className={styles.formBox}>
                 <h2 className={styles.formTitle}>NHẬN 7 NGÀY TẬP MIỄN PHÍ NGAY</h2>
                 <form className={styles.freeTrialForm}>
                   <input type="text" placeholder="Tên" required />
@@ -179,7 +184,7 @@ export default function News() {
                     *Chỉ áp dụng cho khách hàng lần đầu tập luyện tại The New Gym
                   </div>
                 </form>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>

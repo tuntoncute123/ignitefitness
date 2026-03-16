@@ -1,3 +1,5 @@
+import Reveal from '../Reveal/Reveal'
+import { Link } from 'react-router-dom'
 import styles from './Pricing.module.css'
 
 const PLANS = [
@@ -23,48 +25,54 @@ export default function Pricing() {
   return (
     <section className={styles.section} id="pricing">
       <div className="container">
-        <h2 className="section-title">Gói Hội Viên</h2>
-        <p className="section-sub">Lựa chọn gói tập phù hợp với nhu cầu và ngân sách của bạn</p>
+        <Reveal direction="up">
+          <h2 className="section-title">Gói Hội Viên</h2>
+          <p className="section-sub">Lựa chọn gói tập phù hợp với nhu cầu và ngân sách của bạn</p>
+        </Reveal>
 
         {/* Bootstrap grid: 1 col mobile, 2 col md+ */}
         <div className="row g-3 justify-content-center mb-4">
-          {PLANS.map((plan) => (
+          {PLANS.map((plan, i) => (
             <div key={plan.id} className="col-12 col-md-6" style={{ maxWidth: '420px' }}>
-              <div
-                id={plan.id}
-                className={`${styles.card} ${plan.featured ? styles.featured : ''} h-100`}
-              >
-                <div className={styles.cardInner}>
-                  <h3 className={styles.planName}>
-                    {plan.name}<br /><strong>{plan.nameStrong}</strong>
-                  </h3>
-                  <div className={styles.price}>
-                    <span className={styles.amount}>{plan.price}</span>
-                    <span className={styles.currency}>VNĐ</span>
-                    <span className={styles.period}>/Tháng</span>
+              <Reveal direction="up" delay={i + 1} className="h-100">
+                <div
+                  id={plan.id}
+                  className={`${styles.card} ${plan.featured ? styles.featured : ''} h-100`}
+                >
+                  <div className={styles.cardInner}>
+                    <h3 className={styles.planName}>
+                      {plan.name}<br /><strong>{plan.nameStrong}</strong>
+                    </h3>
+                    <div className={styles.price}>
+                      <span className={styles.amount}>{plan.price}</span>
+                      <span className={styles.currency}>VNĐ</span>
+                      <span className={styles.period}>/Tháng</span>
+                    </div>
+                    <Link
+                      to="/tham-gia"
+                      id={`${plan.id}-btn`}
+                      className={`${styles.planBtn} ${plan.featured ? styles.planBtnFeatured : styles.planBtnDefault}`}
+                    >
+                      Tham gia gói →
+                    </Link>
+                    <p className={styles.desc}>{plan.desc}</p>
+                    <Link to="/tham-gia" id={`${plan.id}-detail`} className={styles.detail}>Xem chi tiết →</Link>
                   </div>
-                  <a
-                    href="#"
-                    id={`${plan.id}-btn`}
-                    className={`${styles.planBtn} ${plan.featured ? styles.planBtnFeatured : styles.planBtnDefault}`}
-                  >
-                    Tham gia gói →
-                  </a>
-                  <p className={styles.desc}>{plan.desc}</p>
-                  <a href="#" id={`${plan.id}-detail`} className={styles.detail}>Xem chi tiết →</a>
+                  {plan.featured && <div className={styles.deco} />}
                 </div>
-                {plan.featured && <div className={styles.deco} />}
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>
 
-        <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-          <a href="#" className={styles.compareBtn} id="btn-compare">So sánh gói tập</a>
-          <a href="#free-trial" className={styles.compareBtn} id="btn-free-trial-pricing">
-            Nhận 7 ngày tập miễn phí
-          </a>
-        </div>
+        <Reveal direction="up" delay={3}>
+          <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a href="#" className={styles.compareBtn} id="btn-compare">So sánh gói tập</a>
+            <a href="#free-trial" className={styles.compareBtn} id="btn-free-trial-pricing">
+              Nhận 7 ngày tập miễn phí
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

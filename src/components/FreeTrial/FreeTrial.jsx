@@ -1,3 +1,4 @@
+import Reveal from '../Reveal/Reveal'
 import styles from './FreeTrial.module.css'
 import gymTrainerImg from '../../assets/gym_trainer.png'
 
@@ -5,10 +6,10 @@ export default function FreeTrial() {
   return (
     <section className={styles.section} id="free-trial">
       <div className={`container ${styles.container}`}>
-        <div className={styles.imgWrap}>
+        <Reveal direction="right" className={styles.imgWrap}>
           <img src={gymTrainerImg} alt="Personal trainer Ignite Fitness" />
-        </div>
-        <div className={styles.content}>
+        </Reveal>
+        <Reveal direction="left" className={styles.content}>
           <h2 className={styles.title}>
             7 NGÀY TẬP LUYỆN<br />MIỄN PHÍ
           </h2>
@@ -19,7 +20,7 @@ export default function FreeTrial() {
           <a href="#" className="btn btn-outline-blue" id="btn-free-trial-detail">
             Xem chi tiết →
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

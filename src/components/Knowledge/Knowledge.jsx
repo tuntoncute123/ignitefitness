@@ -1,3 +1,4 @@
+import Reveal from '../Reveal/Reveal'
 import styles from './Knowledge.module.css'
 
 const ARTICLES = [
@@ -28,25 +29,29 @@ export default function Knowledge() {
   return (
     <section className={styles.section} id="knowledge">
       <div className="container">
-        <h2 className="section-title">Kiến Thức Tập Luyện</h2>
-        <p className="section-sub">
-          Cập nhật những kiến thức tập luyện và dinh dưỡng mới nhất từ đội ngũ chuyên gia
-        </p>
+        <Reveal direction="up">
+          <h2 className="section-title">Kiến Thức Tập Luyện</h2>
+          <p className="section-sub">
+            Cập nhật những kiến thức tập luyện và dinh dưỡng mới nhất từ đội ngũ chuyên gia
+          </p>
+        </Reveal>
 
         {/* Bootstrap: 1 col xs, 2 col sm, 3 col lg */}
         <div className="row g-3">
-          {ARTICLES.map((a) => (
+          {ARTICLES.map((a, i) => (
             <div key={a.id} className="col-12 col-sm-6 col-lg-4">
-              <article id={a.id} className={`${styles.card} h-100`}>
-                <div className={styles.thumb} style={{ background: a.color }}>
-                  <span className={styles.tag}>{a.tag}</span>
-                </div>
-                <div className={styles.body}>
-                  <h3>{a.title}</h3>
-                  <p>{a.desc}</p>
-                  <a href="/tin-tuc" id={`${a.id}-link`} className={styles.link}>Đọc thêm →</a>
-                </div>
-              </article>
+              <Reveal direction="up" delay={i + 1}>
+                <article id={a.id} className={`${styles.card} h-100`}>
+                  <div className={styles.thumb} style={{ background: a.color }}>
+                    <span className={styles.tag}>{a.tag}</span>
+                  </div>
+                  <div className={styles.body}>
+                    <h3>{a.title}</h3>
+                    <p>{a.desc}</p>
+                    <a href="/tin-tuc" id={`${a.id}-link`} className={styles.link}>Đọc thêm →</a>
+                  </div>
+                </article>
+              </Reveal>
             </div>
           ))}
         </div>
@@ -54,3 +59,4 @@ export default function Knowledge() {
     </section>
   )
 }
+
