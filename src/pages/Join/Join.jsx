@@ -11,7 +11,24 @@ export default function Join() {
   return (
     <div className={styles.joinPage}>
       <div className="container mt-5">
-        <Reveal direction="fade">
+        <Reveal direction="up" delay={0.2}>
+          <div className={styles.imageGallery}>
+            <div className={styles.mainImage}>
+              <img src="https://join.thenewgym.vn/images/club-images/club-1/1.webp" alt="TNG Hoàng Văn Thụ 1" />
+              <button className={styles.seeMoreBtn}>Xem thêm</button>
+            </div>
+            <div className={styles.sideImages}>
+              <div className={styles.sideImage}>
+                <img src="https://join.thenewgym.vn/images/club-images/club-1/2.webp" alt="TNG Hoàng Văn Thụ 2" />
+              </div>
+              <div className={styles.sideImage}>
+                <img src="https://join.thenewgym.vn/images/club-images/club-1/3.webp" alt="TNG Hoàng Văn Thụ 3" />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal direction="fade" delay={0.4}>
           {/* Branch Top Row */}
           <div className={styles.branchHeader}>
             <div className={styles.branchInfo}>
