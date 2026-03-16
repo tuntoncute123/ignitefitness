@@ -1,24 +1,16 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Header from './components/Header/Header'
-import HeroSlider from './components/HeroSlider/HeroSlider'
-import Features from './components/Features/Features'
-import GymInterior from './components/GymInterior/GymInterior'
-import FreeTrial from './components/FreeTrial/FreeTrial'
-import Pricing from './components/Pricing/Pricing'
-import Branches from './components/Branches/Branches'
-import AppSection from './components/AppSection/AppSection'
-import Knowledge from './components/Knowledge/Knowledge'
-import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
-
-import Facilities from './pages/Facilities/Facilities'
+import FloatingButtons from './components/FloatingButtons/FloatingButtons'
+import BackToTop from './components/BackToTop/BackToTop'
+import Home from './pages/Home/Home'
 import News from './pages/News/News'
+import Facilities from './pages/Facilities/Facilities'
 import Join from './pages/Join/Join'
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation()
-
   useEffect(() => {
     if (hash) {
       setTimeout(() => {
@@ -27,44 +19,29 @@ function ScrollToHash() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' })
         }
-      }, 100)
+      }, 100) // Small delay to let components mount
     } else {
       window.scrollTo(0, 0)
     }
   }, [pathname, hash])
-
   return null
-}
-
-function HomePage() {
-  return (
-    <>
-      <HeroSlider />
-      <Features />
-      <GymInterior />
-      <FreeTrial />
-      <Pricing />
-      <Branches />
-      <AppSection />
-      <Knowledge />
-      <CTA />
-    </>
-  )
 }
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToHash />
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/co-so-vat-chat" element={<Facilities />} />
+        <Route path="/" element={<Home />} />
         <Route path="/tin-tuc" element={<News />} />
+        <Route path="/co-so-vat-chat" element={<Facilities />} />
         <Route path="/tham-gia" element={<Join />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+      <FloatingButtons />
+      <BackToTop />
+    </>
   )
 }
 
