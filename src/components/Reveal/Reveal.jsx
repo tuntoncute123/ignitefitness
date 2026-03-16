@@ -1,3 +1,4 @@
+import { createElement } from 'react'
 import { useReveal } from '../../hooks/useReveal'
 
 /**
@@ -13,7 +14,7 @@ export default function Reveal({
   children,
   direction = 'up',
   delay = 0,
-  as: Tag = 'div',
+  as: element = 'div',
   className = '',
   ...rest
 }) {
@@ -28,9 +29,9 @@ export default function Reveal({
     .filter(Boolean)
     .join(' ')
 
-  return (
-    <Tag ref={ref} className={classes} {...rest}>
-      {children}
-    </Tag>
+  return createElement(
+    element,
+    { ref, className: classes, ...rest },
+    children
   )
 }

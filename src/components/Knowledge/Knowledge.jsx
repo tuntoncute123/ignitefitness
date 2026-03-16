@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Reveal from '../Reveal/Reveal'
 import styles from './Knowledge.module.css'
 
@@ -48,7 +49,7 @@ export default function Knowledge() {
                   <div className={styles.body}>
                     <h3>{a.title}</h3>
                     <p>{a.desc}</p>
-                    <a href="/tin-tuc" id={`${a.id}-link`} className={styles.link}>Đọc thêm →</a>
+                    <Link to="/tin-tuc" id={`${a.id}-link`} className={styles.link}>Đọc thêm →</Link>
                   </div>
                 </article>
               </Reveal>

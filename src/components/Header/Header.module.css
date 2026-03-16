@@ -126,7 +126,72 @@
 
 .navLink:hover { color: #00AEEF; background: rgba(0,174,239,0.07); }
 
-.caret { font-size: 0.65rem; opacity: 0.55; }
+.caret {
+  font-size: 0.65rem;
+  opacity: 0.55;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.caretOpen {
+  transform: rotate(180deg);
+  opacity: 0.85;
+}
+
+.moreMenu {
+  position: relative;
+}
+
+.moreToggle {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.navLinkActive {
+  color: #00AEEF;
+  background: rgba(0,174,239,0.07);
+}
+
+.moreDropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 240px;
+  background: #e8e8e8;
+  border-bottom: 2px solid #00AEEF;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.16);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+}
+
+.moreDropdownOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.moreItem {
+  display: block;
+  padding: 12px 18px;
+  color: #121212;
+  text-decoration: none;
+  font-size: 1.03rem;
+  font-weight: 650;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.moreItem:hover {
+  color: #00AEEF;
+  background: rgba(255,255,255,0.32);
+}
 
 /* ── ACTIONS ── */
 .actions {
@@ -242,6 +307,55 @@
   color: #00AEEF;
   background: rgba(0,174,239,0.05);
   padding-left: 30px;
+}
+
+.drawerMore {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.drawerMoreToggle {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawerMoreToggle:hover {
+  padding-left: 24px;
+}
+
+.drawerMoreToggleOpen {
+  color: #00AEEF;
+}
+
+.drawerSubmenu {
+  max-height: 0;
+  overflow: hidden;
+  background: #e8e8e8;
+  border-bottom: 2px solid #00AEEF;
+  transition: max-height 0.28s ease;
+}
+
+.drawerSubmenuOpen {
+  max-height: 260px;
+}
+
+.drawerSubLink {
+  display: block;
+  padding: 12px 34px;
+  color: #141414;
+  font-size: 1.02rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.drawerSubLink:hover {
+  color: #00AEEF;
+  background: rgba(255,255,255,0.32);
 }
 
 .drawerDivider {

@@ -8,6 +8,9 @@ import { useEffect, useRef, useState } from 'react'
 export function useReveal(options = {}) {
   const ref = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
+  const root = options.root ?? null
+  const rootMargin = options.rootMargin ?? '0px 0px -60px 0px'
+  const threshold = options.threshold ?? 0.15
 
   useEffect(() => {
     const el = ref.current
@@ -20,11 +23,11 @@ export function useReveal(options = {}) {
           observer.unobserve(el) // trigger only once
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -60px 0px', ...options }
+      { root, rootMargin, threshold }
     )
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [root, rootMargin, threshold])
 
   return [ref, isVisible]
 }

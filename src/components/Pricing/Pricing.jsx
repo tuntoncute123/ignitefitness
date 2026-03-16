@@ -1,6 +1,7 @@
 import Reveal from '../Reveal/Reveal'
 import { Link } from 'react-router-dom'
 import styles from './Pricing.module.css'
+import { OFFICIAL_URLS } from '../../constants/links'
 
 const PLANS = [
   {
@@ -67,10 +68,10 @@ export default function Pricing() {
 
         <Reveal direction="up" delay={3}>
           <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-            <a href="#" className={styles.compareBtn} id="btn-compare">So sánh gói tập</a>
-            <a href="#free-trial" className={styles.compareBtn} id="btn-free-trial-pricing">
+            <a href={OFFICIAL_URLS.membershipComparison} className={styles.compareBtn} id="btn-compare" target="_blank" rel="noreferrer">So sánh gói tập</a>
+            <Link to="/#free-trial" className={styles.compareBtn} id="btn-free-trial-pricing">
               Nhận 7 ngày tập miễn phí
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

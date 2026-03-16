@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './HeroSlider.module.css'
 import heroBanner1 from '../../assets/hero_banner_1.png'
 import heroBanner2 from '../../assets/hero_banner_2.png'
@@ -12,7 +13,7 @@ const SLIDES = [
     title: 'IGNITE FITNESS 2026',
     sub: 'Nâng tầm trải nghiệm tập luyện của bạn với hệ thống phòng gym hiện đại nhất Việt Nam',
     cta: 'Xem chi tiết →',
-    ctaHref: '#features',
+    ctaHref: '/#features',
   },
   {
     id: 'slide-2',
@@ -21,7 +22,7 @@ const SLIDES = [
     title: 'HƯỚNG DẪN\nTẬP LUYỆN MIỄN PHÍ',
     sub: 'Đội ngũ PT chuyên nghiệp sẵn sàng đồng hành cùng bạn trên hành trình thay đổi bản thân',
     cta: 'Tìm hiểu ngay →',
-    ctaHref: '#free-trial',
+    ctaHref: '/#free-trial',
   },
   {
     id: 'slide-3',
@@ -30,7 +31,7 @@ const SLIDES = [
     title: 'THÊM BẠN\nTHÊM VUI',
     sub: 'Giới thiệu bạn bè, cùng nhau rèn luyện và nhận ưu đãi hấp dẫn mỗi tháng',
     cta: 'Tham gia ngay →',
-    ctaHref: '#pricing',
+    ctaHref: '/#pricing',
   },
 ]
 
@@ -64,9 +65,9 @@ export default function HeroSlider() {
                 ))}
               </h1>
               <p className={styles.sub}>{slide.sub}</p>
-              <a href={slide.ctaHref} className={`btn btn-white-outline ${styles.cta}`}>
+              <Link to={slide.ctaHref} className={`btn btn-white-outline ${styles.cta}`}>
                 {slide.cta}
-              </a>
+              </Link>
             </div>
           </div>
         ))}
